@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Localka-Box MOTD</title>
-   <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <!-- Главное окно на весь экран -->
-    <div class="motd-window">
-        
-        <!-- ЛЕВАЯ ПРЕДУПРЕЖДАЮЩАЯ ПОЛОСА -->
-        <div class="hazard-side-bar"></div>
-
-        <!-- ОСНОВНОЙ КОНТЕНТ СПРАВА -->
-        <div class="motd-main-core">
-            
-                        <!-- ВЕРХНЯЯ ПОЛОСА С НАЗВАНИЕМ И КАТЕГОРИЯМИ -->
+            <!-- ВЕРХНЯЯ ПОЛОСА С НАЗВАНИЕМ И КАТЕГОРИЯМИ -->
             <div class="motd-navbar">
                 <div class="nav-branding">
-                   <img class="nav-logo" src="img/lcb.png" alt="Logo">
+                    <img class="nav-logo" src="lcb.png" alt="Logo">
                     <span class="nav-title">Localka-Box</span>
                 </div>
                 
@@ -29,110 +10,7 @@
                     <button class="tab-btn" onclick="openTab(event, 'how-to-play')">О режиме</button>
                     <!-- НОВАЯ КАТЕГОРИЯ -->
                     <button class="tab-btn" onclick="openTab(event, 'binds')">Бинды</button>
-                    <button class="tab-btn" onclick="openTab(event, 'binds')">Discord</button>
-
-
-            <!-- КОНТЕНТ ВКЛАДОК -->
-            <div class="motd-body">
-                
-                <!-- Вкладка: Правила (Rus / Eng) -->
-                <div id="rules" class="tab-content active">
-                                       
-                    <h3 class="lang-heading">Русский (Rus)</h3>
-                    <ul class="scp-list">
-                        <li><span>1.1.</span> Незнание правил не освобождает от ответственности.</li>
-                        <li><span>1.2.</span> Если вас обидели, выйдите из игры и все будет хорошо.</li>
-                        <li><span>1.3.</span> Использование читов (стороннее ПО, позволяющее получить преимущество над другими игроками) карается перманентным баном.</li>
-                        <li><span>1.4.</span> Помеха игровому процессу карается варном (1/3).</li>
-                        <li><span>1.5.</span> NSFW, порно, нацисткие спреи, приколы фейлы караются баном от 1-й до 2-х недель.</li>
-                        <li><span>1.6.</span> Политика запрещена. (Мы за мир)</li>
-                        <li><span>1.7.</span> Запрещено вовлекать в бой (PvP) игроков без их согласия. Нарушение карается предупреждением (варн 1/3).</li>
-                        <li><span>1.8.</span> Запрещено использование административных полномочий/команд во время RP-процесса или PvP.</li>
-                        <li><span>1.9.</span> Запрещено использование SoundPad.</li>
-                    </ul>
-
-                    <h3 class="lang-heading" style="margin-top: 40px;">English (Eng)</h3>
-                    <ul class="scp-list">
-                        <li><span>1.1.</span> Ignorance of the rules is no excuse.</li>
-                        <li><span>1.2.</span> If you've been bullied, exit the game and everything will be fine.</li>
-                        <li><span>1.3.</span> Using cheats (third-party software that allows you to gain an advantage over other players) will result in a permanent ban.</li>
-                        <li><span>1.4.</span> Interference with the rp process is punishable by warn (1/3).</li>
-                        <li><span>1.5.</span> NSFW content, pornography, Nazi sprays, jokes, and fails will result in a ban of 1 to 2 weeks.</li>
-                        <li><span>1.6.</span> Politics is prohibited. (We are for peace)</li>
-                        <li><span>1.7.</span> Engaging players in combat (PvP) without their consent is prohibited. Violation of this rule is punishable by a warning (1/3rd level).</li>
-                        <li><span>1.8.</span> Using administrative powers/commands during RP or PvP is prohibited.</li>
-                        <li><span>1.9.</span> The use of SoundPad is prohibited.</li>
-                    </ul>
+                    <!-- ИЗМЕНЕНА КАТЕГОРИЯ DISCORD (ТЕПЕРЬ ЭТО ССЫЛКА!) -->
+                    <button class="tab-btn" onclick="window.open('https://discord.gg/ВАШ_ИНВАЙТ', '_blank')">Discord</button>
                 </div>
-
-                <!-- Вкладка: Как играть -->
-                <div id="how-to-play" class="tab-content">
-                    <div class="scp-meta-text">
-                        Z-City — это проект, изменяющий механику получения урона и управление персонажем.
-
-В состав Z-City также входят собственная система вооружения и игровой режим. Мы стремимся создать реалистичный, но увлекательный игровой процесс. Окунитесь в безумие, полное неожиданностей.
-                    </div>
-                    
-                    <ul class="scp-list">
-                        <li><span>[ЭТАП 01]</span> Новая система медицины взамен стандартного HP. Смерть наступает только при гибели мозга от урона или асфиксии. Включает реалистичные эффекты и новые мед-предметы.</li>
-                        <li><span>[ЭТАП 02]</span> Система, позволяющая перемещаться в состоянии ragdoll. Вы можете ползать, скользить, стрелять, а также использовать предметы, двери и кнопки.</li>
-                        <li><span>[ЭТАП 03]</span> Система брони, разработанная специально для этого проекта и отлично взаимодействующая с системой здоровья. У каждого вида брони свой уровень защиты. Даже если броня не будет пробита, вы всё равно получите урон от тупого удара.</li>
-                        <li><span>[ЭТАП 04]</span> Уникальная система боеприпасов с большим разнообразием типов: обычные, экспансивные, бронебойные и даже светошумовые патроны.</li>
-                        <li><span>[ЭТАП 05]</span> Кастомная оружейная база, включающая также ракетницы, оружие повстанцев и Альянса, электрошокер и слизнекота. Каждая пуля может стать смертельной.</li>
-                        <li><span>[ЭТАП 06]</span> Индивидуальный внешний вид и аксессуары для персонажей..И не только !</li>
-
-
-
-                    </ul>
-                </div>
-
-                <!-- Вкладка: Бинды (НОВАЯ) -->
-                <div id="binds" class="tab-content">
-                                       
-                    <ul class="scp-list">
-                        <li><span>[БИНД 01]</span> <strong>bind "key" "hg_change_posture"</strong> — Забиндить позу оружия.</li>
-                        <li><span>[БИНД 02]</span> <strong>bind "key" "fake"</strong> — Упасть в рагдолл.</li>
-                        <li><span>[БИНД 03]</span>bind "key" "+hmcd_holdbreath"</strong> — Задержка дыхания: полезна для защиты от угарного газа и цианида, а также помогает при прицеливании.</li>
-                        <li><span>[БИНД 04]</span> <strong>bind "key" "hg_kick"</strong> — Пинок.</li>
-                        <li><span>[БИНД 05]</span> <strong>bind "key" "+hg_zoom"</strong> — Зум как в Day-Z.</li>
-                        <li><span>[БИНД 06]</span> <strong>bind "key" "suicide"</strong> — Суицид.</li>
-                        <li><span>[БИНД 07]</span> <strong>bind "key" "+alt1" "alt2"</strong> — Наклоны вправо и влево.</li>
-                    </ul>
-                </div>
-
             </div>
-
-            
-        </div>
-
-    </div>
-
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-
-        <div id="binds" class="tab-content">
-                                       
-                    <ul class="scp-list">
-                        <li><span>[БИНД 01]</span> <strong>bind "key" "hg_change_posture"</strong> — Забиндить позу оружия.</li>
-                        <li><span>[БИНД 02]</span> <strong>bind "key" "fake"</strong> — Упасть в рагдолл.</li>
-                        <li><span>[БИНД 03]</span>bind "key" "+hmcd_holdbreath"</strong> — Задержка дыхания: полезна для защиты от угарного газа и цианида, а также помогает при прицеливании.</li>
-                        <li><span>[БИНД 04]</span> <strong>bind "key" "hg_kick"</strong> — Пинок.</li>
-                        <li><span>[БИНД 05]</span> <strong>bind "key" "+hg_zoom"</strong> — Зум как в Day-Z.</li>
-                        <li><span>[БИНД 06]</span> <strong>bind "key" "suicide"</strong> — Суицид.</li>
-                        <li><span>[БИНД 07]</span> <strong>bind "key" "+alt1" "alt2"</strong> — Наклоны вправо и влево.</li>
-                    </ul>
-                </div>
-</body>
-</html>
